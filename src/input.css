@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-play overflow-x-hidden;
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  /* mainpage */
+  .items {
+    @apply h-screen bg-secondary;
+  }
+  .items__title {
+    @apply pt-8 flex flex-row items-center gap-8;
+  }
+  .items__title h1 {
+    @apply text-light text-4xl;
+  }
+  .items__create {
+    @apply flex flex-row gap-2 text-xl text-light;
+  }
+  .items__create i {
+    @apply text-primary;
+  }
+  /* create */
+  .create {
+    @apply h-screen bg-secondary pt-24;
+  }
+  .create__title h1 {
+    @apply text-light text-4xl pb-8;
+  }
+  .create__wrapper form {
+    @apply flex flex-col w-[50%] bg-transparent;
+  }
+  .create__wrapper form .create__input {
+    @apply mb-4 bg-transparent border-b-4 border-primary text-light;
+  }
+  .create__wrapper form label {
+    @apply text-light;
+  }
+  #items__container {
+    @apply flex flex-col pt-8 gap-8;
+  }
+  .items__details {
+    @apply flex flex-row justify-between;
+  }
+  .items__details h4 {
+    @apply text-light text-4xl cursor-pointer;
+  }
+  .clickedItem {
+    @apply h-screen bg-secondary pt-8;
+  }
+  .clickedItem__title {
+    @apply flex flex-row gap-4 text-3xl text-light;
+  }
+  .clickedItem__edit {
+    @apply flex flex-row text-light;
+  }
+  .clickedItem__info {
+    @apply flex flex-col gap-8 pt-6 text-3xl text-light;
+  }
+}
+
+@layer components {
+  header {
+    @apply shadow-lg;
+  }
+  .header__wrapper h2 {
+    @apply py-2 text-3xl font-bold text-primary;
+  }
+  .modal {
+    @apply flex flex-col gap-8 justify-center w-80 absolute top-[30%] left-[42%] bg-light h-48 border-dark rounded-3xl z-[2];
+  }
+  .modal p {
+    @apply text-center text-2xl;
+  }
+  .modal__btn {
+    @apply flex flex-row justify-around;
+  }
+  .overlay {
+    @apply fixed inset-0 w-full h-full bg-[rgba(0,0,0,0.5)] backdrop-blur-sm z-[1];
+  }
+}
+@layer utilities {
+  .btn {
+    @apply py-2 px-4 bg-transparent border border-transparent rounded-xl;
+  }
+  .btn.bg__primary {
+    @apply text-primary w-fit mx-auto cursor-pointer;
+  }
+  .btn.bg__delete {
+    @apply bg-delete w-fit cursor-pointer text-white;
+  }
+  .btn.bg__light {
+    @apply bg-light w-fit cursor-pointer text-dark border-dark;
+  }
+}

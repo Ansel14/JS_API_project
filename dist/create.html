@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="./index.html"><h2>Inventory</h2></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- CREATE -->
+    <section class="create">
+      <div class="container">
+        <div class="create__wrapper">
+          <div class="create__title">
+            <h1>Create items</h1>
+          </div>
+          <form action="">
+            <label for="item--name">Item Name</label>
+            <input class="create__input" type="text" name="" id="item--name" />
+            <label for="stock">Stock</label>
+            <input class="create__input" type="number" name="" id="stock" />
+            <label for="price">Price</label>
+            <input class="create__input" type="text" name="" id="price" />
+            <label for="description">Description</label>
+            <textarea class="create__input" name="" id="description"></textarea>
+            <a onclick="createItem()" class="btn bg__primary">Add Item</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./createItem.js"></script>
+  </body>
+</html>
