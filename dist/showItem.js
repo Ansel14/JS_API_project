@@ -1,8 +1,5 @@
 let id_array = JSON.parse(localStorage.getItem("list-id")) ?? [];
 
-console.log(id_array);
-console.log(id_array.join("&id="));
-
 axios
   .get("https://api.restful-api.dev/objects?id=" + id_array.join("&id="), {
     headers: {
@@ -14,9 +11,6 @@ axios
       const itemsContainer = document.querySelector("#items__container");
       const list = document.createElement("li");
       list.setAttribute("class", "items__details");
-
-      // const linkName = document.createElement("a");
-      // linkName.setAttribute("href", "./page.html");
 
       const listName = document.createElement("h4");
       listName.setAttribute("class", "items__details--name");
@@ -32,8 +26,6 @@ axios
       list.appendChild(delBtn);
       itemsContainer.appendChild(list);
     }
-
-    console.log(response.data);
   });
 
 listItem = (index) => {
@@ -61,6 +53,5 @@ deleteItem = (index) => {
     id_array.splice(listIndex, 1);
     localStorage.setItem("list-id", JSON.stringify(id_array));
     location.reload();
-    // console.log(listIndex);
   };
 };

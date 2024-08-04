@@ -22,7 +22,6 @@ createItem = () => {
 
         localStorage.setItem("list-id", JSON.stringify(id_array));
 
-        console.log(id_array);
         location.href = "./index.html";
       },
       (error) => {

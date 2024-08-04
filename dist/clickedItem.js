@@ -24,5 +24,4 @@ axios
 editItem = (id) => {
     localStorage.setItem("edit-item", JSON.stringify(id));
     location.href = "./editPage.html";
-  // console.log(id);
 };
